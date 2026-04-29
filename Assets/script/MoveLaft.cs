@@ -6,7 +6,12 @@ public class MoveLaft : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector3.left *  speed * Time.deltaTime);
+        if (!PlayerController.instance.gameOver)
+        {
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
+        }
+
+        
     }
 
 
